@@ -1,0 +1,22 @@
+﻿@model PieShop.ViewModel.HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+@foreach (var pie in Model.Pies)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="figure-caption">
+            <h3>
+                <a asp-controller="Home" asp-action="Details" asp-route-id="@pie.Id">
+                  @pie.Price.ToString("c")</a>
+            </h3>
+            <h2>@pie.Name</h2>
+        </div>
+    </div>
+  
+   
+}
+

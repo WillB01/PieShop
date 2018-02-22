@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" asp-href-include="/lib/bootstrap/dist/**/*.min.css"
+          asp-href-exclude="**/*-reboot*,**/*-grid" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-fixed-top">
+        <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
+        <ul class="nav navbar-nav">
+            <li><a asp-controller="Feedback" asp-action="Index" class="nav-item">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="container body-container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
+
