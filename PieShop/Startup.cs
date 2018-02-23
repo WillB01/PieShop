@@ -46,6 +46,7 @@ namespace PieShop
             }
             app.UseStatusCodePages();
             app.UseStaticFiles();
+
             app.UseAuthentication();
             app.UseMvc(routes =>
                 routes.MapRoute(

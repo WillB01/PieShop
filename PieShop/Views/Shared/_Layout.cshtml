@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+@inject SignInManager<IdentityBuilder> SignInManager
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -12,6 +14,8 @@
         <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
         <ul class="nav navbar-nav">
             <li><a asp-controller="Feedback" asp-action="Index" class="nav-item">Feedback</a></li>
+            <li><a asp-controller="Account" asp-action="Register" class="nav-item"></a> </li>
+            <li><a asp-controller="Account" asp-action="Login" class="nav-item">Login</a></li>
         </ul>
     </nav>
     <div class="container body-container">
